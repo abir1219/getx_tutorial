@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:getx_tutorial/helper/init_controller.dart' as di;
 import 'package:getx_tutorial/screens/my_home_page.dart';
 
-void main() {
+import 'helper/init_binding.dart';
+
+Future<void> main() async{
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await di.init();
   runApp(const MyApp());
 }
 
@@ -13,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: InitBinding(),
       title: 'Getx Practice',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

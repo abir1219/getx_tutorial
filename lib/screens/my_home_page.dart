@@ -10,7 +10,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.put(TapController());
+    var controller = Get.find<TapController>();
 
     return Scaffold(
       body: Container(

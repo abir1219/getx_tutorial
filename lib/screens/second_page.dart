@@ -10,7 +10,7 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.put(ListController());
+    var controller = Get.find<ListController>();
 
     return Scaffold(
       appBar: AppBar(
