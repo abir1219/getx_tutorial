@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:getx_tutorial/controller/tap_controller.dart';
 import 'package:getx_tutorial/screens/first_page.dart';
+import 'package:getx_tutorial/screens/second_page.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -81,7 +82,28 @@ class MyHomePage extends StatelessWidget {
                       ),
                     )),
               ),
-            )
+            ),
+            GestureDetector(
+              onTap: () {
+                Get.to(const SecondPage());
+              },
+              child: Container(
+                margin: const EdgeInsets.all(20),
+                width: double.maxFinite,
+                height: 80,
+                decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+                    borderRadius: BorderRadius.circular(20)),
+                child: const Center(
+                    child: Text(
+                      "Go to second page",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                      ),
+                    )),
+              ),
+            ),
           ],
         ),
       ),

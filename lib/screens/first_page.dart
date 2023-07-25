@@ -8,7 +8,7 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TapController controller = Get.find();
+    TapController controller = Get.find<TapController>();
 
 
     return Scaffold(
